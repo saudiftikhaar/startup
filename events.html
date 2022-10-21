@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button onclick="changeDom()">Click</button>
+    <ul id="items">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+   <h1 id="head1">this is heading</h1>
+   <img src="bluebird.jpg" id="img" width="100" height="100">
+   <form id = "f1">
+    <label>Username</label><input type="text" id="username" name="username" />
+    <label>Password</label><input type="password" id="password" name="password" />
+    <p style="color: red" id="para1" onclick="paraFun(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime atque rerum, asperiores quo nobis cum deserunt ab minus harum eveniet amet fugit suscipit ratione nam corporis quam eum ipsum consectetur?</p>   
+    <p style="color: green" id="para2" onclick="paraFun(this)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime atque rerum, asperiores quo nobis cum deserunt ab minus harum eveniet amet fugit suscipit ratione nam corporis quam eum ipsum consectetur?</p>   
+</form>
+<div id = "news"></div>
+<h2 id="head2">HEADING 1</h2>
+   <script>
+    const changeDom = () => {
+        const h2 = document.getElementById("head2");
+        h2.setAttribute('class','heading');
+        
+        
+        document.getElementById("head1").innerHTML = "Pakistan";
+        document.getElementById("img").width = "200";
+        document.getElementById("img").height = "200";
+        const username = document.forms["f1"]["username"].value;
+        const password = document.forms["f1"]["password"].value;
+        console.log(username,password)
+        document.querySelector("#para1").style.color = "green";
+        
+        const p = document.createElement("p");
+        p.id = "abc";
+        p.innerHTML = "THIS IS A NEW PARAGRAPH";
+         const div = document.getElementById("news")
+         div.appendChild(p);
+
+
+         const li = document.createElement("li");
+         li.textContent = "NEW ITEM";
+         document.getElementById("items").appendChild(li);
+    }
+
+         const paraFun = (para) => {
+         if(para.id === "para1") {
+            console.log("para1")
+         }
+        else {
+                console.log("para2")
+            }
+         }
+
+        
+   </script>
+    
+</body>
+</html>

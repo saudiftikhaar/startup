@@ -1,0 +1,31 @@
+{
+  "name": "nod",
+  "version": "1.0.0",
+  "description": " a node js app.",
+  "main": "app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saudkhawn786/startup.git"
+  },
+  "keywords": [
+    "nod"
+  ],
+  "author": "saud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saudkhawn786/startup/issues"
+  },
+  "homepage": "https://github.com/saudkhawn786/startup#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "nvm": "^0.0.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0"
+  }
+}
